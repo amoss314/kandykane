@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import MainNavigation from './components/layout/MainNavigation';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
-import ProductssPage from './pages/Products';
+import ProductsPage from './pages/Products';
 import ContactPage from './pages/Contact';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <AboutPage />
         </Route>
         <Route path='/products'>
-          <ProductssPage />
+          <ProductsPage />
         </Route>
         <Route path='/contact'>
           <ContactPage />

@@ -1,11 +1,14 @@
 import classes from './NewContacts.module.css';
 
 function NewContactsForm() {
+
+
+  
   function submitHandler(event) {
     event.preventDefault();
 
-    if(`title` < 1){
-      console.log("Please input name")
+    if(`phonenumber` < 10){
+      console.log("Please input area code")
     }
     return;
     

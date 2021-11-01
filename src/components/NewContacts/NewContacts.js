@@ -4,7 +4,7 @@ function NewContactsForm() {
   function submitHandler(event) {
     event.preventDefault();
 
-    if(`title` < 0){
+    if(`title` < 1){
       console.log("Please input name")
     }
     return;

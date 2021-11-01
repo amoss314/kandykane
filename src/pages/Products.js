@@ -14,7 +14,7 @@ const Title = styled.div`
 
 function ProdutsPage() {
  
-  const [flower, setFlower] = useState("");
+  const [flowers, setFlowers] = useState([]);
 
   useEffect(() => {
       const url = "https://api.unsplash.com/search/collections/?query=flowers&client_id=ajJ-1qfeeR9_15ZMNN-QlHIRzpSlqNXA0-R0le21aZ4";
@@ -23,8 +23,16 @@ function ProdutsPage() {
           try {
               const response = await fetch(url);
               const json = await response.json();
-              console.log(json.slip.flower);
-              setFlower(json.slip.flower);
+              console.log(json);
+
+              const flowers = json.results; 
+              console.log(flowers);
+
+              const listItems = flowers.map((flower) =>{
+                return <img src={flower.preview_photos[0].urls.raw} width="300" height="300" alt="photos"/>
+
+              })
+              setFlowers(listItems);
           } catch (error) {
               console.log("error", error);
           }
@@ -35,7 +43,7 @@ function ProdutsPage() {
 
   return (
         <Title> Flowers 
-          <Body>{flower}</Body>
+          <Body>{flowers}</Body>
           </Title>
   );
 };

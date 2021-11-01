@@ -1,7 +1,12 @@
+import HomeStyle from '../components/Home.style'
+
 
 
 function HomePage() {
-    return <div>  </div>;
+    return <div>
+      <HomeStyle />
+    </div>
+    
   }
   
   export default HomePage;

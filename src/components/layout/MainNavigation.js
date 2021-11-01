@@ -5,7 +5,7 @@ import classes from './MainNavigation.module.css';
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Kandy Kane - Bus Rentals</div>
+      <div className={classes.logo}>Prolific Creations</div>
       <nav>
         <ul>
           <li>
@@ -15,10 +15,10 @@ function MainNavigation() {
             <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/services'>Services</Link>
+            <Link to='/products'>Products</Link>
           </li>
           <li>
-            <Link to='/book-now'>Book Now</Link>
+            <Link to='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>

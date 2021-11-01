@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import MainNavigation from './components/layout/MainNavigation';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
-import ServicesPage from './pages/Services';
-import BookPage from './pages/BookNow';
+import ProductssPage from './pages/Products';
+import ContactPage from './pages/Contact';
 
 function App() {
   return (
@@ -17,11 +17,11 @@ function App() {
         <Route path='/about'>
           <AboutPage />
         </Route>
-        <Route path='/services'>
-          <ServicesPage />
+        <Route path='/products'>
+          <ProductssPage />
         </Route>
-        <Route path='/book-now'>
-          <BookPage />
+        <Route path='/contact'>
+          <ContactPage />
         </Route>
       </Switch>
     </div>

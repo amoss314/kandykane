@@ -1,36 +1,72 @@
 import classes from './NewContacts.module.css';
+import React, {useState} from 'react';
 
 function NewContactsForm() {
-
+  const [firstName, setFirstName] = useState("");
+  const [emailName, setEmailName] = useState("");
+  const [questionName, setQuestionName] = useState("");
 
   
+  const [firstNameErr, setFirstNameErr] = useState({});
+  const [emailNameErr, setEmailNameErr] = useState({});
+  
+
+
+ 
   function submitHandler(event) {
     event.preventDefault();
+    const isValid = formValidation();
+    if(isValid){
 
-    if(`phonenumber` < 10){
-      console.log("Please input area code")
+      setFirstName("");
+      setEmailName("");
+      }
     }
-    return;
     
-  }
+    const formValidation = () =>{
+      const firstNameErr = {};
+      const emailNameErr = {};
+     
+      let isValid = true; 
+
+      if(firstName.trim().length < 3){
+        firstNameErr.firstNameShort = "Please enter valid name";
+        isValid = false;
+      }
+
+      if(emailName.trim().length < 3){
+        emailNameErr.emailNameShort = " Please enter valid email";
+        isValid = false;
+      }
+
+      setFirstNameErr(firstNameErr);
+      setEmailNameErr(emailNameErr);
+      return isValid;
+
+    }
+  
+
+
 
   return (
      <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor='title'>Name</label>
-          <input type='text' required id='title' />
+          <label>Name</label>
+          <input type='text' value={firstName} onChange={(e)=>{setFirstName(e.target.value)}}/>
         </div>
+        {Object.keys(firstNameErr).map((key)=>{
+          return <div style={{color: "red"}}>{firstNameErr[key]}</div>
+        })}
         <div className={classes.control}>
-          <label htmlFor='phonenumber'>Phone Number</label>
-          <input type='text' required id='phonenumber' />
+          <label> Email </label>
+          <input type='text' value={emailName} onChange={(e)=>{setEmailName(e.target.value)}}/>
         </div>
+        {Object.keys(emailNameErr).map((key)=>{
+          return <div style={{color: "red"}}>{emailNameErr[key]}</div>
+        })}
         <div className={classes.control}>
-          <label htmlFor='emailaddress'>Email Address</label>
-          <input type='text' required id='emailaddress' />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor='description'>Questions?</label>
-          <textarea id='description' required rows='5'></textarea>
+          <label> Questions </label>
+          <textarea id='description' value={questionName} onChange={(e)=>{setQuestionName(e.target.value)}}/>
         </div>
         <div className={classes.actions}>
           <button>Send</button>

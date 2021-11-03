@@ -15,7 +15,7 @@ function MainNavigation() {
             <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/products'>Products</Link>
+            <Link to='/gallery'>Gallery</Link>
           </li>
           <li>
             <Link to='/contact'>Contact</Link>

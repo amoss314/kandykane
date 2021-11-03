@@ -9,7 +9,8 @@ function NewContactsForm() {
   
   const [firstNameErr, setFirstNameErr] = useState({});
   const [emailNameErr, setEmailNameErr] = useState({});
-  
+  const [questionNameErr, setQuestionNameErr] = useState({});
+
 
 
  
@@ -20,12 +21,14 @@ function NewContactsForm() {
 
       setFirstName("");
       setEmailName("");
+      setQuestionName("");
       }
     }
     
     const formValidation = () =>{
       const firstNameErr = {};
       const emailNameErr = {};
+      const questionNameErr = {};
      
       let isValid = true; 
 
@@ -38,9 +41,14 @@ function NewContactsForm() {
         emailNameErr.emailNameShort = " Please enter valid email";
         isValid = false;
       }
+      if(questionName.trim().length < 20){
+        questionNameErr.questionNameShort = " Please enter question";
+        isValid = false;
+      }
 
       setFirstNameErr(firstNameErr);
       setEmailNameErr(emailNameErr);
+      setQuestionNameErr(questionNameErr);
       return isValid;
 
     }
@@ -68,6 +76,9 @@ function NewContactsForm() {
           <label> Questions </label>
           <textarea id='description' value={questionName} onChange={(e)=>{setQuestionName(e.target.value)}}/>
         </div>
+        {Object.keys(questionNameErr).map((key)=>{
+          return <div style={{color: "red"}}>{questionNameErr[key]}</div>
+        })}
         <div className={classes.actions}>
           <button>Send</button>
         </div>

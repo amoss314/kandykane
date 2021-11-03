@@ -7,12 +7,10 @@ const Body = styled.div`
     backgroud-color: grey;
     `;
 
-const Title = styled.div`
-    font-color: blue;
-    `;
 
 
-function ProdutsPage() {
+
+function GalleryPage() {
  
   const [flowers, setFlowers] = useState([]);
 
@@ -29,7 +27,7 @@ function ProdutsPage() {
               console.log(flowers);
 
               const listItems = flowers.map((flower) =>{
-                return <img src={flower.preview_photos[0].urls.raw} width="300" height="300" alt="photos"/>
+                return <img src={flower.preview_photos[0].urls.raw} width="150" height="150" alt="photos"/>
 
               })
               setFlowers(listItems);
@@ -42,27 +40,12 @@ function ProdutsPage() {
   }, []);
 
   return (
-        <Title> Flowers 
+        
           <Body>{flowers}</Body>
-          </Title>
+          
   );
 };
 
 
-//   let [flowerImage, setFlowerImage] = useState(null)
-
-//   useEffect(() => {
-//     fetch("https://api.unsplash.com/search/collections/?query=flowers&client_id=ajJ-1qfeeR9_15ZMNN-QlHIRzpSlqNXA0-R0le21aZ4")
-//     .then(response => response.json())
-    
-//     .then(data => setFlowerImage(data.message))
-//   },[])
-
-//   return (
-//     <div>
-//     {flowerImage && <img src={flowerImage} alt="unsplash" />}
-//     </div>
-//   );
-// }
-  
-  export default ProdutsPage;
+ 
+  export default GalleryPage;

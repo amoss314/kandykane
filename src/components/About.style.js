@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Body = styled.div`
 background-color: lavendar;
@@ -15,12 +16,19 @@ color: purple;
 font-size: 30px;
 `;
 
+const Container = styled.div`
+position: relative;
+text-align: center;
+color: white;
+`;
+
   function AboutStyle(){
 
   return(
       <Body>
-      <img src="/assets/images/About.jpg" width="500" height="500" alt="Budda" />
-      <img src="/assets/images/Products.jpg" width="500" height="500" alt="Fish" />
+        <Container>
+      <img src="/assets/images/About.jpg" width="625" height="200" class="img-fluid"  alt="Budda" />
+      <img src="/assets/images/Contact.jpg" width="625" height="200" class="img-fluid"  alt="Fish" />
       <Lists>
         <ul>
           <Font>
@@ -30,6 +38,7 @@ font-size: 30px;
           </Font>
         </ul>
         </Lists>
+        </Container>
       </Body>  
 
   );

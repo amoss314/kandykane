@@ -5,6 +5,7 @@ import React from 'react';
 const Body = styled.div`
 background-color: lavendar;
 position: right-center;
+font-italic;
 `;
 
 const Tree = styled.div`
@@ -13,11 +14,6 @@ width: 300px;
 padding: 100px;
 `;
 
-const Font = styled.div`
-font-family: Cursive, "Lucida Handwriting";
-color: purple;
-font-size: 30px;
-`;
 
 
   function HomeStyle(){
@@ -25,7 +21,7 @@ font-size: 30px;
 
   return(
       <Body>
-          <Font> Welcome!........ Inspiration at work</Font>
+          <div> Welcome!........ Inspiration at work</div>
      <Tree> <img src="/assets/images/Home.jpg" width="1100" height="900" alt="Life" /></Tree>
       </Body> 
       

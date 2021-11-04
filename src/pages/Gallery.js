@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -27,7 +28,7 @@ function GalleryPage() {
               console.log(flowers);
 
               const listItems = flowers.map((flower) =>{
-                return <img src={flower.preview_photos[0].urls.raw} width="150" height="150" alt="photos"/>
+                return <img src={flower.preview_photos[0].urls.raw} width="150" height="150" class="img-fluid" alt="photos"/>
 
               })
               setFlowers(listItems);

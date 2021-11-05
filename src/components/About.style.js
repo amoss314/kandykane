@@ -3,7 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Body = styled.div`
-background-color: lavendar;
+background-color: Linen;
 `;
 
 const Lists = styled.div`

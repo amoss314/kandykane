@@ -21,8 +21,8 @@ padding: 100px;
 
   return(
       <Body>
-          <div> Welcome!........ Inspiration at work</div>
-     <Tree> <img src="/assets/images/Home.jpg" width="1100" height="900" alt="Life" /></Tree>
+          <div> Welcome!........ Inspiration at work!</div>
+     <Tree> <img src="/assets/images/Home.jpg" width="1100" height="1000" class="rounded mx-auto d-block" alt="Life" /></Tree>
       </Body> 
       
 

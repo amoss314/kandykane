@@ -28,7 +28,7 @@ function GalleryPage() {
               console.log(flowers);
 
               const listItems = flowers.map((flower) =>{
-                return <img src={flower.preview_photos[0].urls.raw} width="150" height="150" class="img-fluid" alt="photos"/>
+                return <img src={flower.preview_photos[0].urls.thumb} class="img-fluid" alt="photos"/>
 
               })
               setFlowers(listItems);

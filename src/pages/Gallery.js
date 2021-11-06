@@ -12,7 +12,7 @@ function GalleryPage() {
 
   useEffect(() => {
     const url =
-      "https://api.unsplash.com/search/collections/?query=flowers&client_id=ajJ-1qfeeR9_15ZMNN-QlHIRzpSlqNXA0-R0le21aZ4";
+      "https://api.unsplash.com/search/collections/?query=flowers&per_page=30&client_id=ajJ-1qfeeR9_15ZMNN-QlHIRzpSlqNXA0-R0le21aZ4";
 
     const fetchData = async () => {
       try {

@@ -1,31 +1,29 @@
-import HomeStyle from '../components/Home.style'
-import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Font = styled.div`
-font-family: Cursive, "Lucida Handwriting";
-color: purple;
-font-size: 30px;
+  color: purple;
 `;
 
 const Container = styled.div`
-position: relative;
-text-align: center;
-color: white;
-background-color: Linen;
-
+  text-align: center;
+  background-color: Linen;
 `;
 
-
 function HomePage() {
-    return <Container>
-        <Font>
+  return (
+    <Container>
+      <Font>
         <header>Prolific Creations</header>
-        
-      <HomeStyle />
+        <img
+          src="/assets/images/Home.jpg"
+          height="1000"
+          width="1000"
+          alt="Life"
+        />
       </Font>
-          </Container>
-    
-  }
-  
-  export default HomePage;
+    </Container>
+  );
+}
+
+export default HomePage;

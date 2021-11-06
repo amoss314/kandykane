@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import classes from './MainNavigation.module.css';
+import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
@@ -9,16 +9,16 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to='/gallery'>Gallery</Link>
+            <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>

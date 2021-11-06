@@ -1,0 +1,7 @@
+div.round3 {
+  border: 2px solid rgb(21, 129, 129);
+  border-radius: 12px;
+  padding: 5px;
+  width: 45%;
+  position: center;
+}
